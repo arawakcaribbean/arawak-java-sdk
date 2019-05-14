@@ -4,7 +4,18 @@ This SDK provides functionalities to establish communication with the different 
 
 == Installation and Getting Started
 
-Use as dependency in Java projects:
+* Clone this project (git clone https://github.com/arawakcaribbean/arawak-java-sdk.git)
+* Run: 
+
+[source,java,indent=0]
+----
+
+	mvn clean
+	mvn install
+
+----
+
+* Use as dependency in Java projects:
 
 [source,java,indent=0]
 ----
