@@ -9,7 +9,46 @@ Use as dependency in Java projects:
 [source,java,indent=0]
 ----
 
-<groupId>ca.tourism.platform</groupId>
-	<artifactId>arawaks-sdk</artifactId>
-	<version>0.0.1</version>
+	<dependency>
+		<groupId>ca.tourism.platform</groupId>
+		<artifactId>arawaks-sdk</artifactId>
+		<version>0.0.1</version>
+	</dependency>
+
+----
+
+== Available classes
+
+* BookableProvider
+* BookingProvider
+* ClaimProvider
+* CountryProvider
+* LocationProvider
+* MailSenderProvider
+* ResourceProvider
+* ReviewsProvider
+* StatsProvider
+
+== Example and use
+
+[source,java,indent=0]
+----
+
+public class Run {
+
+	public static void main(String[] args) {
+		CountryProvider countryProvider = new CountryProvider("tokenSecret*") ;
+		Country country = new Country("countryName", "CN", "capitalName", new LinkedList<String>(), 0.0, 0.0) ;
+		try {
+
+			// POST example
+			Country response = countryProvider.createCountry(country) ;
+			System.out.println(response.toString());
+			
+		} catch (HttpException e) {
+			System.out.println("[ERROR] - " + e.getMessage());
+		}
+	}
+}
+
 ----
