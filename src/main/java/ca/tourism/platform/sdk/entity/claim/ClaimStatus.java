@@ -1,0 +1,13 @@
+package ca.tourism.platform.sdk.entity.claim ;
+
+public enum ClaimStatus {
+	CLAIMED, 
+	REPORTED_BY_MAIL,
+	WIZARD_COMPLETED_BY_CLAIMER,
+	IN_VERIFICATION,
+	ACEPTED,
+	REJECTED_BY_CLAIMER,
+	REJECTED_BY_TIME,
+	REJECTED_BY_ADMIN,
+	STOPPED
+}
