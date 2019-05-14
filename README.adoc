@@ -48,7 +48,7 @@ This SDK provides functionalities to establish communication with the different 
 public class Run {
 
 	public static void main(String[] args) {
-		CountryProvider countryProvider = new CountryProvider("tokenSecret*") ;
+		CountryProvider countryProvider = new CountryProvider("secretToken*") ;
 		Country country = new Country("countryName", "CN", "capitalName", new LinkedList<String>(), 0.0, 0.0) ;
 		try {
 
@@ -63,3 +63,5 @@ public class Run {
 }
 
 ----
+
+NOTE: The secretToken* is empty for the moment.
