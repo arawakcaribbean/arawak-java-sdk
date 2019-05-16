@@ -5,6 +5,7 @@ import ca.tourism.platform.sdk.entity.country.Country;
 import ca.tourism.platform.sdk.entity.page.CustomPage;
 import ca.tourism.platform.sdk.exceptions.HttpException;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -20,10 +21,6 @@ public class CountryProvider {
 
     public Country createCountry(Country country) throws HttpException {
         return restClientProvider.post("/api/v1/location/countries", Country.class, country);
-    }
-
-    public List<Country> getAllCountries() throws HttpException {
-        return restClientProvider.get("/api/v1/location/countries", List.class);
     }
 
     public Country getCountryById(String id) throws HttpException {

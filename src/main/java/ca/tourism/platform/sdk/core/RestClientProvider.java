@@ -80,6 +80,7 @@ public class RestClientProvider {
             if(response.getStatusLine().getStatusCode() >= 200 && response.getStatusLine().getStatusCode() <= 299) {
                 String content = EntityUtils.toString(response.getEntity());
                 result = mapper.readValue(content,responseType);
+                System.out.println(content);
             } else {
                 throw new HttpException("Http error",response.getStatusLine().getStatusCode(),"", response.getStatusLine().getReasonPhrase()) ;
             }
